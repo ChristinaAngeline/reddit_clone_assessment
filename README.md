@@ -7,9 +7,13 @@
 2.create read me file
 -touch readme.md
 
-##git
-1.fork github clone from github
--fork github clone [type weblink here and get rid of brackets]
+## git
+1. git init
+1. git remote add origin git@github.com:christinaatx/reddit_clone_assessment.git
+
+1. touch .gitgnore
+1. add node_modules
+1. add .DS_Store
 
 ##dependencies
 1. npm install --save express knex ejs body-parser pg morgan
