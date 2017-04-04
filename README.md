@@ -7,7 +7,7 @@
 2.create read me file
 -touch readme.md
 
-## git
+##git
 1. git init
 1. git remote add origin git@github.com:christinaatx/reddit_clone_assessment.git
 
@@ -16,6 +16,7 @@
 1. add .DS_Store
 
 ##dependencies
+1. npm init
 1. npm install --save express knex ejs body-parser pg morgan
 
 ##setup server
@@ -32,13 +33,12 @@
 - usersRoutes = require("./routes/users")
 app.get("/routes/users");
 
--come back to app.js file later and create your additional routes for posts and comments
-
-postsRoutes = require("./routes/posts");
-app.get("/routes/posts")
-
-commentsRoutes = require("./routes/comments")
-app.get("routes/comments")
+CRUD             | REST Action | Request URL | Response Body |
+create           | .post       | /users      |               |
+read(all)        | .get        | /users      |               |
+read(individual) | .get        | /users/0    |               |
+update           | .put        | /users/0    |               |
+delete           | .destroy    | /users/0    |               |
 
 ##setup knex
 ###Setup migration file to create your table
@@ -75,19 +75,9 @@ id | comment  | user_id  | post_id    |
 3  | Item One | Item Two | Item Three |
 
 ###setup view folder users with ejs
-CRUD - create, read, update, delete
 
 folder: users
-index.ejs --users page
-edit.ejs --editing user information
-new.ejs --creating new users
-
-folder: posts
 index.ejs
-new.ejs
 edit.ejs
-
-folder: comments
-index.ejs
 new.ejs
-edit.ejs
+show.ejs
