@@ -28,3 +28,5 @@ app.use('/users', usersRoutes)
 app.listen(port, function() {
   console.log("Your Connected to JQuery = )", port);
 });
+
+module.exports = app;
